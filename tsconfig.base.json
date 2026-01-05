@@ -21,9 +21,11 @@
     "noUncheckedIndexedAccess": true,
     "useUnknownInCatchVariables": true,
 
-    // Some stricter flags (disabled by default)
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
+    // Stricter flags
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // 以下のオプションは既存コードパターンとの互換性のため無効
+    "noPropertyAccessFromIndexSignature": false,
+    "exactOptionalPropertyTypes": false
   }
 }
