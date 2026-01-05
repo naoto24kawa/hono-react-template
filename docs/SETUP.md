@@ -122,6 +122,28 @@ bun run dev:backend
 
 ---
 
+## GitHub リポジトリ設定
+
+マージコミットの形式とブランチ管理の設定を行います。
+
+```bash
+gh api repos/{owner}/{repo} -X PATCH \
+  -f merge_commit_title=PR_TITLE \
+  -f merge_commit_message=BLANK \
+  -f squash_merge_commit_title=PR_TITLE \
+  -f squash_merge_commit_message=BLANK \
+  -F delete_branch_on_merge=true
+```
+
+この設定により:
+
+| 項目 | 効果 |
+|------|------|
+| Merge/Squash commit | `PRタイトル (#PR番号)` 形式になる |
+| Delete branch on merge | マージ後にブランチが自動削除される |
+
+---
+
 ## CI/CD セットアップ（GitHub Actions）
 
 ### GitHub Secrets の設定
@@ -183,6 +205,7 @@ Cloudflare Dashboard で設定:
 - [ ] `bun run prepare` を実行した（Git Hooks）
 - [ ] `bunx playwright install` を実行した
 - [ ] 開発サーバーが正常に起動する
+- [ ] GitHub リポジトリ設定を実行した（マージコミット形式）
 - [ ] GitHub Secrets を設定した（CI/CD 使用時）
 - [ ] Cloudflare リソースを作成した（デプロイ時）
 - [ ] **セットアップ完了処理を実行した（下記参照）**
