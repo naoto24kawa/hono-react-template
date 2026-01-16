@@ -137,9 +137,9 @@ Phase 4: 美観と規約統一
 ## ドキュメント
 
 <!-- DELETE_AFTER_SETUP_START -->
-**初回セットアップ**: [docs/SETUP.md](docs/SETUP.md) を参照してください。
+**初回セットアップ**: [__docs__/SETUP.md](__docs__/SETUP.md) を参照してください。
 <!-- DELETE_AFTER_SETUP_END -->
 
 | ファイル | 内容 |
 |----------|------|
-| [docs/REFERENCE.md](docs/REFERENCE.md) | Hono RPC 実装、TypeScript 設定、トラブルシューティング |
+| [__docs__/REFERENCE.md](__docs__/REFERENCE.md) | Hono RPC 実装、TypeScript 設定、トラブルシューティング |

@@ -230,7 +230,7 @@ CLAUDE.md から以下の3行を削除:
 
 ```markdown
 <!-- DELETE_AFTER_SETUP_START -->
-**初回セットアップ**: [docs/SETUP.md](docs/SETUP.md) を参照してください。
+**初回セットアップ**: [__docs__/SETUP.md](__docs__/SETUP.md) を参照してください。
 <!-- DELETE_AFTER_SETUP_END -->
 ```
 

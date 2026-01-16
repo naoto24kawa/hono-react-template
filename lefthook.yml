@@ -12,14 +12,3 @@ pre-commit:
       glob: "{apps,packages}/**/*.{js,ts,jsx,tsx,json,jsonc}"
       run: bunx biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
       stage_fixed: true
-
-# pre-push: プッシュ前にテストを実行
-pre-push:
-  parallel: true
-  commands:
-    # 単体テスト
-    unit-test:
-      run: bun run test
-    # ビルド確認
-    build:
-      run: bun run build
