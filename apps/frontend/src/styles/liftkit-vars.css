@@ -1,0 +1,169 @@
+/*
+ * LiftKit Golden Ratio Design Tokens
+ * Based on: https://github.com/Chainlift/liftkit (Apache-2.0)
+ * Adapted for Vite + React + Tailwind v4
+ *
+ * Core concept: All sizes, spacing, and typography scale by φ (1.618)
+ */
+
+:root {
+  /* === Scale Factor === */
+  --lk-scalefactor: 1.618;
+  --lk-wholestep: var(--lk-scalefactor);
+  --lk-halfstep: 1.272;
+  --lk-quarterstep: 1.128;
+  --lk-eighthstep: 1.062;
+
+  /* === Golden Ratio Spacing (em-based, relative) === */
+  --lk-size-3xs: 0.236em;
+  --lk-size-2xs: 0.382em;
+  --lk-size-xs: 0.618em;
+  --lk-size-sm: 0.618em;
+  --lk-size-md: 1em;
+  --lk-size-lg: 1.618em;
+  --lk-size-xl: 2.618em;
+  --lk-size-2xl: 4.236em;
+  --lk-size-3xl: 6.854em;
+  --lk-size-4xl: 11.089em;
+
+  /* === Golden Ratio Spacing (rem-based, fixed) === */
+  --lk-space-3xs: 0.236rem;
+  --lk-space-2xs: 0.382rem;
+  --lk-space-xs: 0.618rem;
+  --lk-space-sm: 0.618rem;
+  --lk-space-md: 1rem;
+  --lk-space-lg: 1.618rem;
+  --lk-space-xl: 2.618rem;
+  --lk-space-2xl: 4.236rem;
+  --lk-space-3xl: 6.854rem;
+  --lk-space-4xl: 11.089rem;
+
+  /* === Typography Scale (Golden Ratio) === */
+  --lk-font-display1: 4.236rem;
+  --lk-font-display2: 2.618rem;
+  --lk-font-title1: 2.058rem;
+  --lk-font-title2: 1.618rem;
+  --lk-font-title3: 1.272rem;
+  --lk-font-heading: 1.128rem;
+  --lk-font-body: 1rem;
+  --lk-font-subheading: 0.886rem;
+  --lk-font-callout: 0.942rem;
+  --lk-font-label: 0.834rem;
+  --lk-font-caption: 0.786rem;
+
+  /* === Line Heights === */
+  --lk-leading-display1: 1.128;
+  --lk-leading-display2: 1.272;
+  --lk-leading-title1: 1.272;
+  --lk-leading-title2: 1.272;
+  --lk-leading-title3: 1.272;
+  --lk-leading-heading: 1.272;
+  --lk-leading-body: 1.618;
+  --lk-leading-subheading: 1.272;
+  --lk-leading-callout: 1.272;
+  --lk-leading-label: 1.272;
+  --lk-leading-caption: 1.272;
+
+  /* === Shadows === */
+  --lk-shadow-sm: 0 0 1px 0 rgba(0, 0, 0, 0.2);
+  --lk-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.11),
+    0 0 1px rgba(0, 0, 0, 0.4);
+  --lk-shadow-lg: 0 11px 15px -3px rgba(0, 0, 0, 0.11),
+    0 2px 6px rgba(0, 0, 0, 0.07), 0 0 1px rgba(0, 0, 0, 0.4);
+  --lk-shadow-xl: 0 0 1px 0 rgba(0, 0, 0, 0.3),
+    0 50px 100px 0 rgba(0, 0, 0, 0.15);
+  --lk-shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.23),
+    0 9px 18px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
+
+  /* === LiftKit Material 3 Colors (Light) === */
+  --lk-primary: #0051e0;
+  --lk-onprimary: #faf8ff;
+  --lk-primarycontainer: #dbe1ff;
+  --lk-onprimarycontainer: #00174d;
+  --lk-secondary: #40617f;
+  --lk-onsecondary: #f7f9ff;
+  --lk-secondarycontainer: #cde5ff;
+  --lk-onsecondarycontainer: #001d32;
+  --lk-tertiary: #006878;
+  --lk-ontertiary: #f0fbff;
+  --lk-tertiarycontainer: #a8edff;
+  --lk-ontertiarycontainer: #001f25;
+  --lk-error: #bb0e45;
+  --lk-onerror: #fff8f7;
+  --lk-errorcontainer: #ffd9dc;
+  --lk-onerrorcontainer: #400012;
+  --lk-warning: #7d5800;
+  --lk-onwarning: #fff8f3;
+  --lk-warningcontainer: #ffdea9;
+  --lk-onwarningcontainer: #271900;
+  --lk-success: #006b55;
+  --lk-onsuccess: #e6fff4;
+  --lk-successcontainer: #20ffce;
+  --lk-onsuccesscontainer: #002118;
+  --lk-info: #004ee7;
+  --lk-oninfo: #faf8ff;
+  --lk-infocontainer: #dce1ff;
+  --lk-oninfocontainer: #001550;
+  --lk-background: #fefbff;
+  --lk-onbackground: #171b27;
+  --lk-surface: #faf8ff;
+  --lk-onsurface: #171b27;
+  --lk-surfacevariant: #c8c6c6;
+  --lk-onsurfacevariant: #464747;
+  --lk-outline: #777777;
+  --lk-outlinevariant: #c8c6c6;
+  --lk-surfacedim: #d7d9ea;
+  --lk-surfacebright: #faf8ff;
+  --lk-surfacecontainer: #ebedfe;
+  --lk-surfacecontainerhigh: #e5e7f8;
+  --lk-surfacecontainerhighest: #dfe2f2;
+  --lk-surfacecontainerlow: #f2f3ff;
+  --lk-surfacecontainerlowest: white;
+}
+
+/* === LiftKit Material 3 Colors (Dark) === */
+.dark {
+  --lk-primary: #b5c4ff;
+  --lk-onprimary: #00297a;
+  --lk-primarycontainer: #003cac;
+  --lk-onprimarycontainer: #dbe1ff;
+  --lk-secondary: #a8caec;
+  --lk-onsecondary: #0b334f;
+  --lk-secondarycontainer: #274a66;
+  --lk-onsecondarycontainer: #cde5ff;
+  --lk-tertiary: #00d9fa;
+  --lk-ontertiary: #00363f;
+  --lk-tertiarycontainer: #004e5b;
+  --lk-ontertiarycontainer: #a8edff;
+  --lk-error: #ffb2bb;
+  --lk-onerror: #670021;
+  --lk-errorcontainer: #910032;
+  --lk-onerrorcontainer: #ffd9dc;
+  --lk-warning: #ffba28;
+  --lk-onwarning: #422c00;
+  --lk-warningcontainer: #5e4100;
+  --lk-onwarningcontainer: #ffdea9;
+  --lk-success: #00e0b4;
+  --lk-onsuccess: #00382b;
+  --lk-successcontainer: #00513f;
+  --lk-onsuccesscontainer: #20ffce;
+  --lk-info: #b6c4ff;
+  --lk-oninfo: #00277f;
+  --lk-infocontainer: #003ab1;
+  --lk-oninfocontainer: #dce1ff;
+  --lk-background: #171b27;
+  --lk-onbackground: #d1d4e4;
+  --lk-surface: #222531;
+  --lk-onsurface: #c3c6d6;
+  --lk-surfacevariant: #303030;
+  --lk-onsurfacevariant: #acabab;
+  --lk-outline: #464747;
+  --lk-outlinevariant: #303030;
+  --lk-surfacedim: #20232f;
+  --lk-surfacebright: #434653;
+  --lk-surfacecontainer: #2c303c;
+  --lk-surfacecontainerhigh: #353945;
+  --lk-surfacecontainerhighest: #3e424f;
+  --lk-surfacecontainerlow: #262a36;
+  --lk-surfacecontainerlowest: #1b1f2b;
+}

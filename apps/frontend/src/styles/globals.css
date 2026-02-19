@@ -1,8 +1,10 @@
 @import "tailwindcss";
+@import "./liftkit-vars.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  /* === shadcn/ui Colors (Light) === */
   --color-background: oklch(1 0 0);
   --color-foreground: oklch(0.145 0.005 285.823);
   --color-card: oklch(1 0 0);
@@ -23,9 +25,100 @@
   --color-input: oklch(0.922 0.003 286.32);
   --color-ring: oklch(0.145 0.005 285.823);
   --radius: 0.5rem;
+
+  /* === LiftKit Material 3 Colors (lk- prefixed) === */
+  --color-lk-primary: var(--lk-primary);
+  --color-lk-onprimary: var(--lk-onprimary);
+  --color-lk-primarycontainer: var(--lk-primarycontainer);
+  --color-lk-onprimarycontainer: var(--lk-onprimarycontainer);
+  --color-lk-secondary: var(--lk-secondary);
+  --color-lk-onsecondary: var(--lk-onsecondary);
+  --color-lk-secondarycontainer: var(--lk-secondarycontainer);
+  --color-lk-onsecondarycontainer: var(--lk-onsecondarycontainer);
+  --color-lk-tertiary: var(--lk-tertiary);
+  --color-lk-ontertiary: var(--lk-ontertiary);
+  --color-lk-tertiarycontainer: var(--lk-tertiarycontainer);
+  --color-lk-ontertiarycontainer: var(--lk-ontertiarycontainer);
+  --color-lk-error: var(--lk-error);
+  --color-lk-onerror: var(--lk-onerror);
+  --color-lk-errorcontainer: var(--lk-errorcontainer);
+  --color-lk-onerrorcontainer: var(--lk-onerrorcontainer);
+  --color-lk-warning: var(--lk-warning);
+  --color-lk-onwarning: var(--lk-onwarning);
+  --color-lk-warningcontainer: var(--lk-warningcontainer);
+  --color-lk-onwarningcontainer: var(--lk-onwarningcontainer);
+  --color-lk-success: var(--lk-success);
+  --color-lk-onsuccess: var(--lk-onsuccess);
+  --color-lk-successcontainer: var(--lk-successcontainer);
+  --color-lk-onsuccesscontainer: var(--lk-onsuccesscontainer);
+  --color-lk-info: var(--lk-info);
+  --color-lk-oninfo: var(--lk-oninfo);
+  --color-lk-infocontainer: var(--lk-infocontainer);
+  --color-lk-oninfocontainer: var(--lk-oninfocontainer);
+  --color-lk-background: var(--lk-background);
+  --color-lk-onbackground: var(--lk-onbackground);
+  --color-lk-surface: var(--lk-surface);
+  --color-lk-onsurface: var(--lk-onsurface);
+  --color-lk-surfacevariant: var(--lk-surfacevariant);
+  --color-lk-onsurfacevariant: var(--lk-onsurfacevariant);
+  --color-lk-outline: var(--lk-outline);
+  --color-lk-outlinevariant: var(--lk-outlinevariant);
+  --color-lk-surfacedim: var(--lk-surfacedim);
+  --color-lk-surfacebright: var(--lk-surfacebright);
+  --color-lk-surfacecontainer: var(--lk-surfacecontainer);
+  --color-lk-surfacecontainerhigh: var(--lk-surfacecontainerhigh);
+  --color-lk-surfacecontainerhighest: var(--lk-surfacecontainerhighest);
+  --color-lk-surfacecontainerlow: var(--lk-surfacecontainerlow);
+  --color-lk-surfacecontainerlowest: var(--lk-surfacecontainerlowest);
+
+  /* === LiftKit Golden Ratio Spacing === */
+  --spacing-3xs: var(--lk-space-3xs);
+  --spacing-2xs: var(--lk-space-2xs);
+  --spacing-xs: var(--lk-space-xs);
+  --spacing-sm: var(--lk-space-sm);
+  --spacing-md: var(--lk-space-md);
+  --spacing-lg: var(--lk-space-lg);
+  --spacing-xl: var(--lk-space-xl);
+  --spacing-2xl: var(--lk-space-2xl);
+  --spacing-3xl: var(--lk-space-3xl);
+  --spacing-4xl: var(--lk-space-4xl);
+
+  /* === LiftKit Typography Scale === */
+  --font-size-display1: var(--lk-font-display1);
+  --font-size-display2: var(--lk-font-display2);
+  --font-size-title1: var(--lk-font-title1);
+  --font-size-title2: var(--lk-font-title2);
+  --font-size-title3: var(--lk-font-title3);
+  --font-size-heading: var(--lk-font-heading);
+  --font-size-body: var(--lk-font-body);
+  --font-size-subheading: var(--lk-font-subheading);
+  --font-size-callout: var(--lk-font-callout);
+  --font-size-label: var(--lk-font-label);
+  --font-size-caption: var(--lk-font-caption);
+
+  /* === LiftKit Line Heights === */
+  --leading-display1: var(--lk-leading-display1);
+  --leading-display2: var(--lk-leading-display2);
+  --leading-title1: var(--lk-leading-title1);
+  --leading-title2: var(--lk-leading-title2);
+  --leading-title3: var(--lk-leading-title3);
+  --leading-heading: var(--lk-leading-heading);
+  --leading-body: var(--lk-leading-body);
+  --leading-subheading: var(--lk-leading-subheading);
+  --leading-callout: var(--lk-leading-callout);
+  --leading-label: var(--lk-leading-label);
+  --leading-caption: var(--lk-leading-caption);
+
+  /* === LiftKit Shadows === */
+  --shadow-lk-sm: var(--lk-shadow-sm);
+  --shadow-lk-md: var(--lk-shadow-md);
+  --shadow-lk-lg: var(--lk-shadow-lg);
+  --shadow-lk-xl: var(--lk-shadow-xl);
+  --shadow-lk-2xl: var(--lk-shadow-2xl);
 }
 
 @theme dark {
+  /* === shadcn/ui Colors (Dark) === */
   --color-background: oklch(0.141 0.005 285.823);
   --color-foreground: oklch(0.985 0 0);
   --color-card: oklch(0.141 0.005 285.823);
